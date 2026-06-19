@@ -1,0 +1,344 @@
+/* ---------- Базовый сброс ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Подключаем шрифты ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Zametka_Parletter';
+    src: url('fonts/Zametka_Parletter.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Comfortaa', Arial, sans-serif;
+    background: linear-gradient(to bottom, rgb(221, 101, 101), rgb(238, 196, 155), rgb(98, 214, 234));
+    color: #222;
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ---------- Навигация ---------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    border-bottom: 5px solid #ddd;
+    padding: 20px 0 30px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+/* ===== ГЕРОЙ-БЛОК (белый с графичной тенью влево-вниз) ===== */
+.hero-block {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 50px 30px 40px;
+    margin: 70px 0 30px;
+    text-align: center;
+    box-shadow: -20px 20px 0px rgba(98, 214, 234, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-name {
+    font-family: 'Zametka_Parletter', 'Comfortaa', Arial, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+.hero-specialty {
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: inline-block;
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    background: rgb(252, 211, 170);
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    /*border: 2px solid rgba(221, 101, 101, 0.3);*/
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.hero-btn:hover {
+    background: rgba(252, 211, 170, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    /*border-color: rgba(221, 101, 101, 0.6);*/
+}
+
+/* ===== БЕЛАЯ КАРТОЧКА (внутри героя) ===== */
+.hero-card {
+    background: rgba(245, 247, 252, 0.8);
+    border-radius: 20px;
+    padding: 30px 35px;
+    margin: 25px auto 30px;
+    max-width: 700px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card-text {
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #1a1a2e;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ---------- Секции ---------- */
+section {
+    padding: 40px 0 30px;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* ---------- Заголовки с кастомным шрифтом ---------- */
+.section-title {
+    font-family: 'Zametka_Parletter', 'Comfortaa', Arial, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+/* ---------- Обо мне ---------- */
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 750px;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+}
+
+.about-main {
+    font-size: 1.1rem;
+}
+
+.badge {
+    display: inline-block;
+    background: #eef3ff;
+    padding: 4px 18px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #1a3a8a;
+}
+
+.about-stats {
+    color: #555;
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+/* ---------- Работы / грамоты ---------- */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+}
+
+.certificate-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f7fc;
+    transition: 0.2s;
+}
+
+.certificate-card:hover {
+    transform: scale(1.02);
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---------- Контакты ---------- */
+.contacts-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 40px;
+    background: #f5f7fc;
+    padding: 30px 35px;
+    border-radius: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+}
+
+.contact-item .icon {
+    font-size: 1.4rem;
+}
+
+.contact-item a {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px dotted #aaa;
+}
+
+.contact-item a:hover {
+    color: #0066ff;
+    border-bottom-color: #0066ff;
+}
+
+.contacts-note {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ---------- Футер ---------- */
+.footer-note {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* ===== УВЕЛИЧЕННЫЙ ШРИФТ ДЛЯ ТЕКСТА ===== */
+.about-text,
+.about-main,
+.contacts-block,
+.contacts-note,
+.footer-note,
+.navbar a {
+    font-size: 1.5rem;
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 700px) {
+    .navbar {
+        gap: 1.5rem;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .contacts-block {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .hero-block {
+        padding: 30px 20px 25px;
+        border-radius: 20px;
+    }
+
+    .hero-name {
+        font-size: 2.2rem;
+    }
+
+    .hero-specialty {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        font-size: 0.95rem;
+        padding: 12px 28px;
+    }
+
+    .hero-card {
+        padding: 20px 18px;
+        margin: 18px auto 22px;
+        border-radius: 16px;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 450px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-name {
+        font-size: 1.8rem;
+    }
+
+    .hero-btn {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+
+    .hero-card {
+        padding: 16px 14px;
+        border-radius: 12px;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
