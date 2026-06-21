@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Zametka_Parletter';
-    src: url('Zametka_Parletter.otf') format('opentype');
+    src: url('fonts/Zametka_Parletter.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -181,18 +181,19 @@ section:last-of-type {
 }
 
 /* ---------- Работы / грамоты ---------- */
+
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    align-items: start;  /* ← добавить, чтобы колонки не растягивались */
 }
 
 .certificate-card {
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     background: #f5f7fc;
     transition: 0.2s;
-    padding: 10px;
 }
 
 .certificate-card:hover {
@@ -201,9 +202,7 @@ section:last-of-type {
 
 .certificate-card img {
     width: 100%;
-    height: 100%;
-    aspect-ratio: 3 / 2;  /* картинки стали выше */
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
